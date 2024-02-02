@@ -4,6 +4,7 @@ const router = express.Router();
 const { User } = require("../Models/User");
 const verifyToken = require("../middleware/verifyToken");
 const isValidGoogleProfileImageUrl = require("../utiles/imageUtile");
+const isValidGoogleProfileImageUrl = require("../utiles/imageUtiles");
 
 router.patch("/user", verifyToken, async (req, res, next) => {
   try {
