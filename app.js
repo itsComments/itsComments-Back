@@ -10,6 +10,7 @@ const cors = require("cors");
 
 const indexRouter = require("./routes/index");
 const loginRouter = require("./routes/login");
+const profile = require("./routes/profile")
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use(
 
 app.use("/", indexRouter);
 app.use("/login", loginRouter);
+app.use("/profile", profile);
 
 app.use(function (req, res, next) {
   next(createError(404));
